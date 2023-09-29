@@ -1,66 +1,77 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Basics Repository
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este repositório contém exercícios e projetos básicos para aprender os fundamentos do framework Laravel. É uma ótima maneira de construir uma base sólida em desenvolvimento web com Laravel.
 
-## About Laravel
+## Exercícios
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Aqui estão alguns dos exercícios incluídos neste repositório:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. **Rotas e Controladores**
+   - Exemplo de rotas simples e controladores.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+2. **Modelos e Banco de Dados**
+   - Uso de modelos Eloquent e migrações para interagir com o banco de dados.
 
-## Learning Laravel
+3. **Autenticação**
+   - Configuração de autenticação de usuário, registro e login.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+4. **Middleware**
+   - Implementação de middleware personalizado.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+5. **Formulários e Validação**
+   - Criação de formulários e validação de dados.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+6. **Views e Blade**
+   - Uso do motor de template Blade para criar vistas.
 
-## Laravel Sponsors
+7. **Relacionamentos em Eloquent**
+   - Definição e uso de relacionamentos de banco de dados.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+8. **Paginação**
+   - Paginação de resultados em várias páginas.
 
-### Premium Partners
+9. **Envio de E-mails**
+   - Configuração de envio de e-mails e formulário de contato.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+10. **Fila (Queue)**
+    - Configuração e uso da fila para tarefas em segundo plano.
 
-## Contributing
+11. **Agendamento (Scheduling)**
+    - Configuração de tarefas agendadas para automação.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+12. **Gerenciamento de Erros**
+    - Personalização de páginas de erro e tratamento de exceções.
 
-## Code of Conduct
+13. **Arquivos Estáticos e Mix**
+    - Compilação e gerenciamento de ativos com Laravel Mix.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+14. **Testes**
+    - Escrita de testes unitários e funcionais com PHPUnit.
 
-## Security Vulnerabilities
+## Projetos
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Além dos exercícios, este repositório também inclui projetos simples que permitem aplicar os conceitos aprendidos de forma prática:
 
-## License
+1. **Blog Simples**
+   - Criação de um blog básico com postagens e comentários.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+2. **API de Tarefas**
+   - Criação de uma API RESTful para gerenciar tarefas.
+
+3. **Sistema de E-commerce**
+   - Construção de um sistema de e-commerce com listagem de produtos.
+
+4. **Agenda de Contatos**
+   - Desenvolvimento de uma agenda de contatos.
+
+## Como Usar
+
+Você pode clonar este repositório e seguir as instruções em cada exercício ou projeto. Certifique-se de ter o ambiente de desenvolvimento Laravel configurado.
+
+## Contribuição
+
+Se você gostaria de contribuir com mais exercícios, projetos ou melhorias, fique à vontade para enviar uma solicitação pull. Espero que este repositório ajude você a aprender e aprimorar suas habilidades em Laravel!
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) para obter detalhes.
