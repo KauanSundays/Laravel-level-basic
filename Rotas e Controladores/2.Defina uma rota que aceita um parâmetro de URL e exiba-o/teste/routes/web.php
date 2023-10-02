@@ -16,7 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/created-route', function () {
-    return view('livewire/clicker');  // this route returns a string, 
-});
