@@ -7,7 +7,7 @@ Este repositório contém exercícios e projetos básicos para aprender os funda
 <h3>Rotas e Controladores:</h3>
 
 <ol>
-  <li>Crie uma rota que retorna uma mensagem simples.</li>
+  <li>Crie uma rota que retorna uma mensagem simples.</li> ✔️
   <li>Defina uma rota que aceita um parâmetro de URL e exiba-o.</li>
   <li>Crie um controlador chamado UserController.</li>
   <li>Defina rotas para listar e exibir usuários usando o controlador.</li>
