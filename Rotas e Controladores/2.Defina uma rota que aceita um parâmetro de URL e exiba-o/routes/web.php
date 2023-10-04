@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,5 +23,9 @@ Route::get('/simple', function () {
     return view('simple');
 })->name('simple_route');
 
-Route::get('/{id}', [IdController::class, 'show']);
+
+
+Route::get('/mostrar/{parametro}', function ($parametro) {
+    return "Parâmetro recebido: " . $parametro;
+})->name('parametro_route');
 
