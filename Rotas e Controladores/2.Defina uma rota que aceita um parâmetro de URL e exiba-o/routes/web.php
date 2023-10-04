@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::get('/simple', function () {
     return view('simple');
 })->name('simple_route');
+
+Route::get('/{id}', [IdController::class, 'show']);
+
