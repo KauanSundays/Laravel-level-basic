@@ -14,5 +14,9 @@
             <li>{{ $user->name }}, {{ $user->email}}</li>
         @endforeach
     </ul>
+
+    <a href="route()">
+        <button></button>
+    </a>
 </body>
 </html>
