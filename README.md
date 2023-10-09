@@ -8,8 +8,8 @@ Este repositório contém exercícios e projetos básicos para aprender os funda
 
 <ol>
   <li>Crie uma rota que retorna uma mensagem simples ✔️</li>
-  <li>Defina uma rota que aceita um parâmetro de URL e exiba-o.</li>
-  <li>Crie um controlador chamado UserController.</li>
+  <li>Defina uma rota que aceita um parâmetro de URL e exiba-o ✔️</li>
+  <li>Crie um controlador chamado UserController ✔️</li>
   <li>Defina rotas para listar e exibir usuários usando o controlador.</li>
   <li>Adicione uma rota que redireciona para outra rota.</li>
   <li>Use a diretiva @foreach do Blade para exibir uma lista de itens em uma view.</li>
