@@ -10,73 +10,77 @@ Este repositório contém exercícios e projetos básicos para aprender os funda
   <li>Crie uma rota que retorna uma mensagem simples ✔️</li>
   <li>Defina uma rota que aceita um parâmetro de URL e exiba-o ✔️</li>
   <li>Crie um controlador chamado UserController ✔️</li>
-  <li>Defina rotas para listar e exibir usuários usando o controlador.</li>
-  <li>Adicione uma rota que redireciona para outra rota.</li>
-  <li>Use a diretiva @foreach do Blade para exibir uma lista de itens em uma view.</li>
+  <li>Defina rotas para listar e exibir usuários usando o controlador. ✔️</li>
+  <li>Adicione uma rota que redireciona para outra rota. ✔️</li>
+  <li>Use a diretiva @foreach do Blade para exibir uma lista de itens em uma view. ✔️</li>
 </ol>
 
-Modelos e Banco de Dados:
+<h3>Modelos e Banco de Dados:</h3>
 
-Crie um modelo chamado Produto usando o Artisan.
-Migre uma tabela de banco de dados para armazenar produtos.
-Crie um seeder para popular a tabela de produtos com dados de exemplo.
-Escreva uma consulta Eloquent para recuperar todos os produtos.
-Adicione validação de dados ao criar um novo produto.
-Exiba a lista de produtos em uma view usando Blade.
-Autenticação:
+<ol></ol>
+   <li>Crie um modelo chamado Produto usando o Artisan.</li>
+   <li>Migre uma tabela de banco de dados para armazenar produtos.</li>
+   <li>Crie um seeder para popular a tabela de produtos com dados de exemplo.</li>
+   <li>Escreva uma consulta Eloquent para recuperar todos os produtos.</li>
+   <li>Adicione validação de dados ao criar um novo produto.</li>
+   <li>Exiba a lista de produtos em uma view usando Blade.</li>
+</ol>
 
-Configure a autenticação de usuário usando o Artisan.
-Crie um sistema de registro de usuário.
-Implemente o login de usuário.
-Proteja uma rota para que apenas usuários autenticados possam acessá-la.
+<h3>Autenticação:</h3>
+
+<li>Configure a autenticação de usuário usando o Artisan.</li>
+<li>Crie um sistema de registro de usuário.</li>
+<li>Implemente o login de usuário.</li>
+<li>Proteja uma rota para que apenas usuários autenticados possam acessá-la.</li>
+
 Middleware:
 
-Crie um middleware personalizado que adiciona um cabeçalho HTTP a todas as respostas.
-Aplique um middleware globalmente para todas as rotas.
-Use um middleware para verificar se um usuário tem permissão para acessar uma rota.
+<li>Crie um middleware personalizado que adiciona um cabeçalho HTTP a todas as respostas.</li>
+<li>Aplique um middleware globalmente para todas as rotas.</li>
+<li>Use um middleware para verificar se um usuário tem permissão para acessar uma rota.</li>
 Formulários e Validação:
 
-Crie um formulário para criar um novo produto.
-Valide os dados do formulário no controlador.
-Exiba mensagens de erro na view quando a validação falhar.
+<li>Crie um formulário para criar um novo produto.</li>
+<li>Valide os dados do formulário no controlador.</li>
+<li>Exiba mensagens de erro na view quando a validação falhar.</li>
 Views e Blade:
 
-Crie uma view que estende um layout principal (master layout).
-Use diretivas @if e @else do Blade para controle condicional.
-Use a diretiva @foreach para exibir uma lista de produtos.
-Crie um arquivo de layout personalizado para suas views.
+<li>Crie uma view que estende um layout principal (master layout).</li>
+<li>Use diretivas @if e @else do Blade para controle condicional.</li>
+<li>Use a diretiva @foreach para exibir uma lista de produtos.</li>
+<li>Crie um arquivo de layout personalizado para suas views.</li>
 Relacionamentos em Eloquent:
 
-Defina um relacionamento de um-para-muitos entre um modelo Post e Comentário.
-Crie um formulário para adicionar comentários a um post.
-Exiba os comentários associados a um post em sua view.
+<li>Defina um relacionamento de um-para-muitos entre um modelo Post e Comentário.</li>
+<li>Crie um formulário para adicionar comentários a um post.</li>
+<li>Exiba os comentários associados a um post em sua view.</li>
 Paginação:
 
-Divida uma lista de produtos em várias páginas usando paginação.
-Adicione links de paginação à sua view.
+<li>Divida uma lista de produtos em várias páginas usando paginação.</li>
+<li>Adicione links de paginação à sua view.</li>
 Envio de E-mails:
 
-Configure o envio de e-mails usando o serviço de envio de e-mails do Laravel.
-Crie um controlador para enviar um e-mail de contato.
-Use uma view para criar o conteúdo do e-mail.
+<li>Configure o envio de e-mails usando o serviço de envio de e-mails do Laravel.</li>
+<li>Crie um controlador para enviar um e-mail de contato.</li>
+<li>Use uma view para criar o conteúdo do e-mail.</li>
 Fila (Queue):
 
-Configure a fila para processar o envio de e-mails em segundo plano.
-Crie uma tarefa de fila para enviar e-mails.
-Dispare a tarefa de fila quando um usuário enviar um formulário de contato.
+<li>Configure a fila para processar o envio de e-mails em segundo plano.</li>
+<li>Crie uma tarefa de fila para enviar e-mails.</li>
+<li>Dispare a tarefa de fila quando um usuário enviar um formulário de contato.</li>
 Agendamento (Scheduling):
 
-Configure uma tarefa agendada que é executada a cada dia.
-Use o agendamento para realizar tarefas como limpar registros antigos.
+<li>Configure uma tarefa agendada que é executada a cada dia.</li>
+<li>Use o agendamento para realizar tarefas como limpar registros antigos.</li>
 Gerenciamento de Erros:
 
-Personalize a página de erro 404.
-Implemente uma página de erro personalizada para erros 500.
+<li>Personalize a página de erro 404.</li>
+<li>Implemente uma página de erro personalizada para erros 500.</li>
 Arquivos Estáticos e Mix:
 
-Configure o Laravel Mix para compilar CSS e JavaScript.
-Adicione arquivos CSS e JS a uma view e compile-os usando Mix.
-Configure Mix para minificar e combinar arquivos.
+<li>Configure o Laravel Mix para compilar CSS e JavaScript.</li>
+<li>Adicione arquivos CSS e JS a uma view e compile-os usando Mix.</li>
+<li>Configure Mix para minificar e combinar arquivos.</li>
 Testes:
 
 Escreva um teste unitário para um método em um controlador.
