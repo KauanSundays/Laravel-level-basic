@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ProdutoController extends Controller
 {
     public function listarProdutos() {
-        $produtos = Produto::all();
+        $produtos = Produto::latest()->get();
         return view('welcome', ['produtos' => $produtos]);    
     //Variavel $produtos contem todos os registros da tabela produtos, passados para a view
     }
@@ -35,7 +35,8 @@ class ProdutoController extends Controller
         $produto->save();
     
         // Redirecionamos o usuário para uma página de sucesso ou outra ação após a criação
-        return redirect('/produtos')->with('success', 'Produto criado com sucesso.');
+        return redirect('/')->with('status', 'Profile updated!');
+
     }
     
 }
