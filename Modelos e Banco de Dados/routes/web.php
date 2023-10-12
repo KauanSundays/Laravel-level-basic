@@ -5,4 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ProdutoController::class, 'listarProdutos']);
 
-Route::get('/produtos/criar', [ProdutoController::class, 'criarProdutos']);
+Route::get('/produtos/criar', [ProdutoController::class, 'criarProdutosForm']);
+
+Route::post('/produtos/criar', [ProdutoController::class, 'criarProdutos']);
+
