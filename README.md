@@ -29,9 +29,9 @@ Este repositório contém exercícios e projetos básicos para aprender os funda
 <h3>Autenticação:</h3>
 
 <ol>
-<li>Configure a autenticação de usuário usando o Artisan.</li>
-<li>Crie um sistema de registro de usuário.</li>
-<li>Implemente o login de usuário.</li>
+<li>Configure a autenticação de usuário usando o Artisan. ✔️ </li>
+<li>Crie um sistema de registro de usuário. ✔️ </li>
+<li>Implemente o login de usuário. ✔️  </li>
 <li>Proteja uma rota para que apenas usuários autenticados possam acessá-la.</li>
 </ol>
 
