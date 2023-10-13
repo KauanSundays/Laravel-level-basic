@@ -18,12 +18,12 @@ Este repositório contém exercícios e projetos básicos para aprender os funda
 <h3>Modelos e Banco de Dados:</h3>
 
 <ol>
-   <li>Crie um modelo chamado Produto usando o Artisan.</li>
-   <li>Migre uma tabela de banco de dados para armazenar produtos.</li>
-   <li>Crie um seeder para popular a tabela de produtos com dados de exemplo.</li>
-   <li>Escreva uma consulta Eloquent para recuperar todos os produtos.</li>
-   <li>Adicione validação de dados ao criar um novo produto.</li>
-   <li>Exiba a lista de produtos em uma view usando Blade.</li>
+   <li>Crie um modelo chamado Produto usando o Artisan. ✔️</li>
+   <li>Migre uma tabela de banco de dados para armazenar produtos. ✔️</li>
+   <li>Crie um seeder para popular a tabela de produtos com dados de exemplo. ✔️</li>
+   <li>Escreva uma consulta Eloquent para recuperar todos os produtos. ✔️</li>
+   <li>Adicione validação de dados ao criar um novo produto. ✔️ </li>
+   <li>Exiba a lista de produtos em uma view usando Blade. ✔️ </li>
 </ol>
 
 <h3>Autenticação:</h3>
