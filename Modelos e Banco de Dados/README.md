@@ -1,66 +1,109 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1>Topicos</h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<h3>1. Crie um modelo chamado Produto usando o Artisan. ✔️</h3>
+<p>Criei o Modelo Produto Ultilizando o comando: </p>
 
-## About Laravel
+```sh
+php artisan make:model Produto
+```
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<img src="https://raw.githubusercontent.com/KauanSundays/Laravel-level-basic/master/Modelos%20e%20Banco%20de%20Dados/public/fotomodelo.PNG">
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<h3>2. Migre uma tabela de banco de dados para armazenar produtos. ✔️</h3>
+<p>Primeiro Criei uma migração com o comando: </p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```sh
+php artisan make:migration create_produtos_table
+```
 
-## Learning Laravel
+<p>Personalizei a tabela: </p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<IMG src="https://raw.githubusercontent.com/KauanSundays/Laravel-level-basic/master/Modelos%20e%20Banco%20de%20Dados/public/fotomigration.PNG">
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<p>Logo após rodei as migrações: </p>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```sh
+php artisan migrate
+```
 
-## Laravel Sponsors
+<h3>3. Crie um seeder para popular a tabela de produtos com dados de exemplo. ✔️</h3>
+<p>Comando para criar uma seeder: </p>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```sh
+php artisan make:seeder ProdutosAleatoriosSeeder
+```
 
-### Premium Partners
+<p>Instale a lib faker, onde nos facilitará a criar diversos produtos de uma vez</p>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+```sh
+composer require fakerphp/faker
+```
 
-## Contributing
+<p>Agora, customize sua seeder</p>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<img src="https://raw.githubusercontent.com/KauanSundays/Laravel-level-basic/master/Modelos%20e%20Banco%20de%20Dados/public/fotoseedercustom.PNG">
 
-## Code of Conduct
+<p>Rode o Seed</p>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```sh
+php artisan db:seed
+```
 
-## Security Vulnerabilities
+<p>Dados adicionados ao banco de dados: </p>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<img src="https://raw.githubusercontent.com/KauanSundays/Laravel-level-basic/master/Modelos%20e%20Banco%20de%20Dados/public/fotobancodedados.PNG">
 
-## License
+<h3>4. Escreva uma consulta Eloquent para recuperar todos os produtos. ✔️ </h3>
+<p>Criei uma class no produtoController:</p>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```sh
+    public function listarProdutos() {
+        $produtos = Produto::all();
+       		 return view('welcome', ['produtos' => $produtos]);    
+    	//Variavel $produtos contem todos os registros da tabela produtos, passados para a view
+    	}
+
+
+```
+<P>Na View, ficará assim:</P>
+
+```sh
+        <body>
+	    @foreach ($produtos as $produto)
+	        <div>
+	            <p>{{ $produto->nome }} </p>
+	        </div>
+	    @endforeach
+	</body>
+	</html>
+```
+
+<p>Não esquecer de declarar na rota o controller usado:</p>
+
+```sh
+<Route::get('/', [ProdutoController::class, 'listarProdutos']);
+```
+
+<h3>5. Adicione validação de dados ao criar um novo produto. ✔️ </h3>
+<p>Adicionamos a validação, por uma class no ProdutoController:</p>
+
+<img src="https://raw.githubusercontent.com/KauanSundays/Laravel-level-basic/master/Modelos%20e%20Banco%20de%20Dados/public/fotovalida%C3%A7%C3%A3o.PNG">
+
+<h3>6. Exiba a lista de produtos em uma view usando Blade. ✔️ </h3>
+<p>Com este foreach simples:</p>
+
+<img src="https://raw.githubusercontent.com/KauanSundays/Laravel-level-basic/master/Modelos%20e%20Banco%20de%20Dados/public/fotoforeachcustomizada.PNG">
+
+<p>Conseguimos mostrar o nome do produto e seu preço</p>
+
+<img src="https://raw.githubusercontent.com/KauanSundays/Laravel-level-basic/master/Modelos%20e%20Banco%20de%20Dados/public/fotoresultadoforeach.PNG">
+
+<h1>FIM DE Modelos e Banco de Dados</h1>
+<P>PARABENS!! VOCE ESTÁ PROGREDINDO</P>
+<img src="https://images.sportsbrief.com/images/1120/b347ab5e7adf9d52.webp?v=1" width="400px">
+
+
+
+
+
+
