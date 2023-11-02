@@ -32,13 +32,13 @@ Este repositório contém exercícios e projetos básicos para aprender os funda
 <li>Configure a autenticação de usuário usando o Artisan. ✔️ </li>
 <li>Crie um sistema de registro de usuário. ✔️ </li>
 <li>Implemente o login de usuário. ✔️  </li>
-<li>Proteja uma rota para que apenas usuários autenticados possam acessá-la.</li>
+<li>Proteja uma rota para que apenas usuários autenticados possam acessá-la.  ✔️ </li>
 </ol>
 
 <h3>Middleware:</h3>
 
 <ol>
-<li>Crie um middleware personalizado que adiciona um cabeçalho HTTP a todas as respostas.</li>
+<li>Crie um middleware personalizado que adiciona um cabeçalho HTTP a todas as respostas. </li>
 <li>Aplique um middleware globalmente para todas as rotas.</li>
 <li>Use um middleware para verificar se um usuário tem permissão para acessar uma rota.</li>
 </ol>
