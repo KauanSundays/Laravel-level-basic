@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->float('preco');
-            $table->boolean('disponivel');
+            $table->enum('disponivel', ['sim', 'não']);
             $table->timestamps();
         });
     }
