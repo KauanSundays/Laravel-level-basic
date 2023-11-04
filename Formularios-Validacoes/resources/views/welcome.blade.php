@@ -36,18 +36,27 @@
     }
 </script>
 <body class="d-flex flex-column align-items-center justify-content-center vh-100">
-  <h1 class="mb-4">Jogadores do Time</h1>
+  <h1 class="mb-4">Crie um produto</h1>
   <div class="container center-content mt-4">
       <div id class="container-box text-center">
-          <label for="">Nome: </label>
-          <input type="text" placeholder="Digite o nome do jogador" id="nome">
+          <label for="">Nome do Produto: </label>
+          <input type="text" placeholder="Digite o nome do produto" id="nome">
 
-          <label for="">Posição: </label>
-          <input type="text" placeholder="Digite a posição do jogador" id="posicao">
+          <br>
 
+          <label for="">Valor do Produto: </label>
+          <input type="text" placeholder="Digite o valor do produto" id="valor">
+
+          <br>
+
+          <label for="">O produto esta disponivel? </label>
+          <select name="disponivel" id="disponivel">
+            <option value="1">Sim</option>
+            <option value="2">Não</option>
+          </select>
+          <br>
           <button class="btn btn-success" onclick="enviarFormulario()">Enviar Cadastro</button>
           <br>
-          <button onclick="window.location.href='/mostrar-candidatos'" class="btn btn-warning">Mostrar Todos os Jogadores</button>
       </div>
       
   </div>
