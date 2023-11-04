@@ -3,7 +3,7 @@
 Este repositório contém exercícios e projetos básicos para aprender os fundamentos do framework Laravel. É uma ótima maneira de construir uma base sólida em desenvolvimento web com Laravel.
 
 ## Exercícios
-teste78
+testegfd
 <h3>Rotas e Controladores:</h3>
 
 <ol>
