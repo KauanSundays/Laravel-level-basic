@@ -10,5 +10,5 @@ Route::get('/', function () {
 
 Route::post('/cadastrar-produto', function (\Illuminate\Http\Request $request) {
     dd($request->all());
-    return view('welcome'); // Adicione esta linha para redirecionar para a mesma rota
+    return redirect('/'); // Redireciona para a página inicial
 })->name('cadastrar.produto');
