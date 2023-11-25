@@ -9,6 +9,6 @@ Route::get('/', function () {
 });
 
 Route::post('/cadastrar-produto', function (\Illuminate\Http\Request $request) {
-    dd($request->all());
-    return redirect('/'); // Redireciona para a página inicial
+    // dd($request->all());
+    return redirect('/'); 
 })->name('cadastrar.produto');
