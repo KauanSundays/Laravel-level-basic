@@ -23,5 +23,14 @@
         <br>
         <button>Enviar</button>
     </form>
+
+    <ul>
+        @foreach ($produtos as $produto)
+            <li>
+                {{ $produto->nome }} - {{ $produto->preco_custo }} - {{ $produto->disponivel }}
+            </li>
+        @endforeach
+    </ul>
+    
 </body>
 </html>
