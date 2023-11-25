@@ -9,6 +9,11 @@ Route::get('/', function () {
 });
 
 Route::post('/cadastrar-produto', function (\Illuminate\Http\Request $request) {
-    // dd($request->all());
-    return redirect('/'); 
+    $produto = new Produto();
+    $produto->nome = $request->input('nome');
+    $produto->preco_custo = 0; // Coloque o valor desejado
+    $produto->disponivel = $request->input('disponivel');
+    $produto->save();
+
+    return redirect('/');
 })->name('cadastrar.produto');

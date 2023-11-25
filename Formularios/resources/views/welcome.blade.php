@@ -7,13 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action="{{ route('cadastrar.produto') }}"> {{--  --}}
+    <form method="POST" action="{{ route('cadastrar.produto') }}">
         @csrf
         <label>Nome do Produto</label>
         <input type="text" name="nome" required>
         <br>
-        
-        <button>enviar</button>
+        <label>Disponível</label>
+        <select name="disponivel" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+        <br>
+        <button>Enviar</button>
     </form>
 </body>
 </html>
