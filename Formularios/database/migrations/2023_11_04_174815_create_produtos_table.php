@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,7 +14,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->decimal('preco_custo', 10, 2);
-            //$table->enum('disponivel', ['sim', 'não']);
+            $table->enum('disponivel', ['sim', 'nao']); // Alteração nesta linha
             $table->timestamps();
         });
     }
