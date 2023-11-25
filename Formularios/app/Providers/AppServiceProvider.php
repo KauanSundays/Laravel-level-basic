@@ -23,4 +23,5 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191); // Reduzindo o comprimento padrão para 191 caracteres
     }
+
 }
