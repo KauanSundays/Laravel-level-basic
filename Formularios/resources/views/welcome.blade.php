@@ -12,6 +12,9 @@
         <label>Nome do Produto</label>
         <input type="text" name="nome" required>
         <br>
+        <label>Preço de Custo</label>
+        <input type="number" name="preco_custo" step="0.01" required>
+        <br>
         <label>Disponível</label>
         <select name="disponivel" required>
             <option value="sim">Sim</option>
