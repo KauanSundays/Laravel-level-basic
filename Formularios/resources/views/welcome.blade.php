@@ -7,11 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action="/cadastrar-produto" >
+    <form method="POST" action="{{ route('cadastrar.produto') }}"> {{--  --}}
         <label>Nome do Produto</label>
         <input type="text" name="nome" required>
         <br>
         <button>enviar</button>
     </form>
+    
 </body>
 </html>
