@@ -8,11 +8,11 @@
 </head>
 <body>
     <form method="POST" action="{{ route('cadastrar.produto') }}"> {{--  --}}
+        @csrf
         <label>Nome do Produto</label>
         <input type="text" name="nome" required>
         <br>
         <button>enviar</button>
     </form>
-    
 </body>
 </html>
