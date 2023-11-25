@@ -11,8 +11,6 @@
         <label>Nome do Produto</label>
         <input type="text" name="nome">
         <br>
-        <label for=""></label>
-        <input type="text" name="valor">
         <br>
         <button>enviar</button>
     </form>
