@@ -9,7 +9,7 @@
 <body>
     <form method="POST" action="/cadastrar-produto" >
         <label>Nome do Produto</label>
-        <input type="text" name="nome">
+        <input type="text" name="nome" required>
         <br>
         <button>enviar</button>
     </form>
