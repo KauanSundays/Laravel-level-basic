@@ -48,7 +48,7 @@ testeggfdgdfgfdggfdgfdgfdgfd
 <ol>
 <li>Crie um formulário para criar um novo produto. ✔️</li>
 <li>Valide os dados do formulário no controlador. ✔️</li>
-<li>Exiba mensagens de erro na view quando a validação falhar.</li>
+<li>Exiba mensagens de erro na view quando a validação falhar. ✔️</li>
 </ol>
 
 <h3>Views e Blade:</h3>

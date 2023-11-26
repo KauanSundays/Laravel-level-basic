@@ -13,7 +13,7 @@ class ProdutosController extends Controller
         return view('welcome', ['produtos' => $produtos]);
     }
 
-    public function store(Request $request)
+    public function cadastrarProduto(Request $request)
     {
         $request->validate([
             'nome' => 'required|string|max:255',
@@ -21,12 +21,6 @@ class ProdutosController extends Controller
             'disponivel' => 'required|in:sim,nao',
         ]);
 
-        $produto = new Produto();
-        $produto->nome = $request->input('nome');
-        $produto->preco_custo = $request->input('preco_custo');
-        $produto->disponivel = $request->input('disponivel');
-        $produto->save();
-
-        return redirect('/');
+        return redirect('/')->with('success', 'Produto cadastrado com sucesso!');
     }
 }
