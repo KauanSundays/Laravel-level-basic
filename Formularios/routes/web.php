@@ -7,3 +7,4 @@ use App\Http\Controllers\ProdutosController;
 
 Route::get('/', [ProdutosController::class, 'index']);
 Route::post('/cadastrar-produto', [ProdutosController::class, 'store'])->name('cadastrar.produto');
+
