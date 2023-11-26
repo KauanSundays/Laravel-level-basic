@@ -46,8 +46,8 @@ testeggfdgdfgfdggfdgfdgfdgfd
 <h3>Formulários e Validação:</h3>
 
 <ol>
-<li>Crie um formulário para criar um novo produto.</li>
-<li>Valide os dados do formulário no controlador.</li>
+<li>Crie um formulário para criar um novo produto. ✔️</li>
+<li>Valide os dados do formulário no controlador. </li>
 <li>Exiba mensagens de erro na view quando a validação falhar.</li>
 </ol>
 
