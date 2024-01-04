@@ -8,6 +8,7 @@
 </head>
 <body>
     @yield('content')
+    <p>Escrito no layout</p>
     <footer>
         Footer
     </footer>
