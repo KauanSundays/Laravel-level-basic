@@ -53,10 +53,9 @@ Este repositório contém exercícios e projetos básicos para aprender os funda
 <h3>Views e Blade:</h3>
 
 <ol>
-<li>Crie uma view que estende um layout principal (master layout).</li>
-<li>Use diretivas @if e @else do Blade para controle condicional.</li>
-<li>Use a diretiva @foreach para exibir uma lista de produtos.</li>
-<li>Crie um arquivo de layout personalizado para suas views.</li>
+<li>Crie uma view que estende um layout principal (master layout). ✔️</li>
+<li>Use diretivas @if e @else do Blade para controle condicional. ✔️</li>
+<li>Use a diretiva @foreach para exibir uma lista de produtos. </li>
 </ol>
 
 <h3>Relacionamentos em Eloquent:</h3>

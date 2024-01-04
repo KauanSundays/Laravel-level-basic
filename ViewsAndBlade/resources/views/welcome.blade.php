@@ -11,3 +11,11 @@
 {{-- se trocar 20 para 10 aparecerá o p na tela  --}}
     <p>A condição é certa</p>
 @endif
+
+@php
+    $produtos = ['teste', 'teste2'];
+@endphp
+
+@foreach ($produtos as $produto)
+    <p>{{ $produto }}</p>
+@endforeach
