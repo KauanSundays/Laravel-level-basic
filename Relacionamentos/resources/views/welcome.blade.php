@@ -10,7 +10,7 @@
     <h1>Posts</h1>
     @foreach ($posts as $post)
         <div>
-            <h1><?$post->title?></h1>
+            <h1>{{ $post->title }}</h1>
             <button>Ver mais...</button>
         </div>
     @endforeach
