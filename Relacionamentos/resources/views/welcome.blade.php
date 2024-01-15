@@ -11,7 +11,7 @@
     <h1>Posts</h1>
     @foreach ($posts as $post)
         <div class="post">
-            <h1>{{ $post->title }}</h1>
+            <div class="post-title">{{ $post->title }}</div>
             <button>Ver mais...</button>
         </div>
     @endforeach

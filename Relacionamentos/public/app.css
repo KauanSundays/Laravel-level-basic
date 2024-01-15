@@ -1,3 +1,14 @@
 .post {
-    background-color: black;
+    background-color: violet;
+    margin-bottom: 10px; /* Adicione margem inferior para espaçamento entre as divs de post */
+}
+
+.post-title {
+    width: 20%; /* Largura máxima da div de título */
+    min-width: 15%; /* Largura mínima da div de título */
+    overflow: hidden; /* Para garantir que o texto seja cortado e não transborde */
+    white-space: nowrap; /* Impede a quebra de linha */
+    text-overflow: ellipsis; /* Adiciona reticências (...) se o texto for muito longo */
+    margin: 0; /* Remova a margem padrão para alinhar com o botão */
+    padding: 10px; /* Adiciona um espaçamento interno */
 }
