@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Relacionamentos</title>
+    <link rel="stylesheet" href="{{ asset('app.css') }}">
 </head>
 <body>
     <h1>Posts</h1>
     @foreach ($posts as $post)
-        <div>
+        <div class="post">
             <h1>{{ $post->title }}</h1>
             <button>Ver mais...</button>
         </div>
