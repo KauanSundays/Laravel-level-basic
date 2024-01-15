@@ -12,5 +12,14 @@
     <p>{{ $post->content }}</p>
     <p>Created at: {{ $post->created_at }}</p>
     <p>Updated at: {{ $post->updated_at }}</p>
+
+    <h2>Comments:</h2>
+    <ul>
+        @foreach ($comments as $comment)
+            <li>
+                <strong>{{ $comment->username }}</strong>: {{ $comment->content }}
+            </li>
+        @endforeach
+    </ul>
 </body>
 </html>

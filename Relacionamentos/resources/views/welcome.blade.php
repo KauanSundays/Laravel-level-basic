@@ -12,7 +12,7 @@
     @foreach ($posts as $post)
         <div class="post">
             <div class="post-title">{{ $post->title }}</div>
-            <button>Ver mais...</button>
+            <a href="{{ route('posts.show', ['post' => $post]) }}">Ver mais...</a>
         </div>
     @endforeach
 </body>
