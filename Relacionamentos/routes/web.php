@@ -1,6 +1,7 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 
-Route::get('/', [PostsController::class, 'index']);
+Route::get('/', [PostController::class, 'index']);
