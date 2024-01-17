@@ -10,11 +10,15 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('welcome', ['posts' => $posts]);
+        
+        return view('welcome', compact('posts'));
     }
 
-    public function show(Post $post)
+    public function show($postId)
     {
-        return view('posts.show', ['post' => $post]);
+        $post = Post::findOrFail($postId);
+        $comments = $post->comments; // Relação definida no modelo Post
+
+        return view('posts.show', compact('post', 'comments'));
     }
 }

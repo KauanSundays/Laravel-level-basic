@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>Posts</h1>
+    @dd($posts)
     @foreach ($posts as $post)
         <div class="post">
             <div class="post-title">{{ $post->title }}</div>
