@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Comment;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
-class Comments extends Controller
+class CommentsController extends Controller
 {
-    public function index() 
+    public function index($postId) 
     {
-        $comments = Comment::all();
-        return view('welcome', ['comment' => $comments]);    
+        $post = Post::findOrFail($postId);
+        dd($post);
+        $comments = $post->comments; 
+
+        return view('posts.show', compact('post', 'comments'));    
     }
 }
