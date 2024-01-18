@@ -17,7 +17,7 @@ class PostController extends Controller
     public function show($postId)
     {
         $post = Post::findOrFail($postId);
-        $comments = $post->comments; // Relação definida no modelo Post
+        $comments = $post->comments;
 
         return view('posts.show', compact('post', 'comments'));
     }

@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $post->title }}</title>
     <link rel="stylesheet" href="{{ asset('app.css') }}">
-    <!-- Adicione o link do Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
@@ -27,7 +26,6 @@
         @endforeach
     </ul>
 
-    <!-- Modal para inserir o nome de usuário -->
     <div class="modal fade" id="usernameModal" tabindex="-1" aria-labelledby="usernameModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -36,11 +34,16 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <input type="text" id="usernameInput" class="form-control" placeholder="Seu nome de usuário">
+                    <form id="commentForm">
+                        @csrf
+                        <input type="hidden" name="post_id" value="{{ $post->id }}">
+                        <input type="text" id="usernameInput" class="form-control" placeholder="Seu nome de usuário">
+                        <textarea name="content" id="commentInput" class="form-control" placeholder="Escreva um comentário sobre esse post"></textarea>
+                        <button type="submit" class="btn btn-primary" id="submitCommentBtn">Enviar Comentário</button>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary" id="submitCommentBtn">Enviar Comentário</button>
                 </div>
             </div>
         </div>
@@ -48,17 +51,34 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
         $(document).ready(function() {
-            $("#submitCommentBtn").click(function() {
+            $("#commentForm").submit(function(event) {
+                event.preventDefault();
+
                 var username = $("#usernameInput").val();
                 var comment = $("#commentInput").val();
+                var postId = {{ $post->id }};
 
-                console.log("Username: " + username);
-                console.log("Comment: " + comment);
+                var data = {
+                    _token: $("input[name='_token']").val(),
+                    post_id: postId,
+                    content: comment,
+                    username: username
+                };
 
-                $("#usernameModal").modal("hide");
+                $.ajax({
+                    type: 'POST',
+                    url: '/comments',
+                    data: data,
+                    success: function(response) {
+                        console.log(response);
+                        $("#usernameModal").modal("hide");
+                    },
+                    error: function(error) {
+                        console.error(error);
+                    }
+                });
             });
         });
     </script>
