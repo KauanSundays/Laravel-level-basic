@@ -38,8 +38,9 @@
                         @csrf
                         <input type="hidden" name="post_id" value="{{ $post->id }}">
                         <input type="text" name="username" id="usernameInput" class="form-control" placeholder="Seu nome de usuário">
+                        <textarea name="content" id="commentInput" class="form-control" placeholder="Escreva um comentário sobre esse post"></textarea>
                         <button type="submit" class="btn btn-primary" id="submitCommentBtn">Enviar Comentário</button>
-                    </form>                    
+                    </form>                                      
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -50,8 +51,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- ... Seu código HTML anterior ... -->
-
 <script>
     $(document).ready(function() {
         $("#openModalBtn").click(function() {

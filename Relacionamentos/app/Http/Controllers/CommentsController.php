@@ -18,20 +18,24 @@ class CommentsController extends Controller
 
     public function store(Request $request, $postId)
     {
-        $request->validate([
-            'content' => 'required',
-            'username' => 'required',
-        ]);
-
-        $post = Post::findOrFail($postId);
-
-        $comment = new Comment([
-            'content' => $request->input('content'),
-            'username' => $request->input('username'),
-        ]);
-
-        $post->comments()->save($comment);
-
-        return redirect()->route('posts.show', $postId)->with('success', 'Comentário adicionado com sucesso!');
-    }
+        try {
+            $request->validate([
+                'content' => 'required',
+                'username' => 'required',
+            ]);
+    
+            $post = Post::findOrFail($postId);
+    
+            $comment = new Comment([
+                'content' => $request->input('content'),
+                'username' => $request->input('username'),
+            ]);
+    
+            $post->comments()->save($comment);
+    
+            return redirect()->route('posts.show', $postId)->with('success', 'Comentário adicionado com sucesso!');
+        } catch (\Exception $e) {
+            return back()->withInput()->withErrors(['error' => $e->getMessage()]);
+        }
+    }    
 }
