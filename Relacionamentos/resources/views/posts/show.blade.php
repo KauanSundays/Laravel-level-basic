@@ -53,32 +53,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function() {
+            $("#openModalBtn").click(function() {
+                var commentText = $("#commentInput").val();
+                console.log(commentText);
+            });
+
             $("#commentForm").submit(function(event) {
                 event.preventDefault();
 
                 var username = $("#usernameInput").val();
                 var comment = $("#commentInput").val();
+                console.log(comment);
                 var postId = {{ $post->id }};
-
-                var data = {
-                    _token: $("input[name='_token']").val(),
-                    post_id: postId,
-                    content: comment,
-                    username: username
-                };
-
-                $.ajax({
-                    type: 'POST',
-                    url: '/comments',
-                    data: data,
-                    success: function(response) {
-                        console.log(response);
-                        $("#usernameModal").modal("hide");
-                    },
-                    error: function(error) {
-                        console.error(error);
-                    }
-                });
             });
         });
     </script>
