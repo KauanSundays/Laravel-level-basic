@@ -38,7 +38,6 @@
                         @csrf
                         <input type="hidden" name="post_id" value="{{ $post->id }}">
                         <input type="text" id="usernameInput" class="form-control" placeholder="Seu nome de usuário">
-                        <textarea name="content" id="commentInput" class="form-control" placeholder="Escreva um comentário sobre esse post"></textarea>
                         <button type="submit" class="btn btn-primary" id="submitCommentBtn">Enviar Comentário</button>
                     </form>
                 </div>
@@ -63,7 +62,6 @@
 
                 var username = $("#usernameInput").val();
                 var comment = $("#commentInput").val();
-                console.log(comment);
                 var postId = {{ $post->id }};
             });
         });
