@@ -34,12 +34,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="commentForm">
+                    <form action="{{ route('comments.store', ['postId' => $post->id]) }}" method="post" id="commentForm">
                         @csrf
                         <input type="hidden" name="post_id" value="{{ $post->id }}">
-                        <input type="text" id="usernameInput" class="form-control" placeholder="Seu nome de usuário">
+                        <input type="text" name="username" id="usernameInput" class="form-control" placeholder="Seu nome de usuário">
                         <button type="submit" class="btn btn-primary" id="submitCommentBtn">Enviar Comentário</button>
-                    </form>
+                    </form>                    
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -50,21 +50,43 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("#openModalBtn").click(function() {
-                var commentText = $("#commentInput").val();
-                console.log(commentText);
-            });
+    <!-- ... Seu código HTML anterior ... -->
 
-            $("#commentForm").submit(function(event) {
-                event.preventDefault();
+<script>
+    $(document).ready(function() {
+        $("#openModalBtn").click(function() {
+            var commentText = $("#commentInput").val();
+            console.log(commentText);
+        });
 
-                var username = $("#usernameInput").val();
-                var comment = $("#commentInput").val();
-                var postId = {{ $post->id }};
+        $("#commentForm").submit(function(event) {
+            event.preventDefault();
+
+            var username = $("#usernameInput").val();
+            var comment = $("#commentInput").val();
+            var postId = {{ $post->id }};
+
+            var data = {
+                _token: $("input[name='_token']").val(),
+                post_id: postId,
+                content: comment,
+                username: username
+            };
+
+            $.ajax({
+                type: 'POST',
+                url: '{{ route("comments.store", ["postId" => $post->id]) }}',
+                data: data,
+                success: function(response) {
+                    console.log(response);
+                    $("#usernameModal").modal("hide");
+                },
+                error: function(error) {
+                    console.error(error);
+                }
             });
         });
-    </script>
+    });
+</script>
 </body>
 </html>
