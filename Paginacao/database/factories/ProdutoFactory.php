@@ -3,15 +3,15 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Post;
+use App\Models\Produto;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Post>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Produto>
  */
-class PostFactory extends Factory
+class ProdutoFactory extends Factory
 {
-    protected $model = Post::class;
+    protected $model = Produto::class;
     /**
      * Define the model's default state.
      *
