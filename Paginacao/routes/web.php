@@ -8,4 +8,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', [ProdutoController::class, 'index'])->name('post.index');
+Route::get('posts', [ProdutoController::class, 'index'])->name('post.index');

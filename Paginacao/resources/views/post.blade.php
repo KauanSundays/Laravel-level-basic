@@ -10,7 +10,12 @@
 <body>
     <div class="container">
         <h2>Laravel Ajax Pagination</h2>
-        
+
+        <div id="data-wrapper">
+            <div class="row">
+                @include('data')
+            </div>
+        </div>
     </div>
 </body>
 </html>
