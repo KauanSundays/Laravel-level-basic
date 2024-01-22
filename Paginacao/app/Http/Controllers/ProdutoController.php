@@ -9,6 +9,7 @@ class ProdutoController extends Controller
 {
     public function index()
     {
-        return view('post');
+        $produtos = Produto::paginate(5);
+        return view('produto', compact('produtos'));
     }
 }
