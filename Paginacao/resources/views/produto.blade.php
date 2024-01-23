@@ -16,6 +16,10 @@
                 @include('data')
             </div>
         </div>
+
+        <div class="d-flex">
+            {!! $produtos->links() !!}
+       </div>
     </div>
 </body>
 </html>
