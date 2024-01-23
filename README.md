@@ -3,6 +3,7 @@
 Este repositório contém exercícios e projetos básicos para aprender os fundamentos do framework Laravel. É uma ótima maneira de construir uma base sólida em desenvolvimento web com Laravel.
 
 ## Exercícios
+
 <h3>Rotas e Controladores:</h3>
 
 <ol>
@@ -55,22 +56,22 @@ Este repositório contém exercícios e projetos básicos para aprender os funda
 <ol>
 <li>Crie uma view que estende um layout principal (master layout). ✔️</li>
 <li>Use diretivas @if e @else do Blade para controle condicional. ✔️</li>
-<li>Use a diretiva @foreach para exibir uma lista de produtos. </li>
+<li>Use a diretiva @foreach para exibir uma lista de produtos. ✔️</li>
 </ol>
 
 <h3>Relacionamentos em Eloquent:</h3>
 
 <ol>
-<li>Defina um relacionamento de um-para-muitos entre um modelo Post e Comentário.</li>
-<li>Crie um formulário para adicionar comentários a um post.</li>
-<li>Exiba os comentários associados a um post em sua view.</li>
+<li>Defina um relacionamento de um-para-muitos entre um modelo Post e Comentário. ✔️</li>
+<li>Crie um formulário para adicionar comentários a um post. ✔️</li>
+<li>Exiba os comentários associados a um post em sua view. ✔️</li>
 </ol>
 
 <h3>Paginação:</h3>
 
 <ol>
-<li>Divida uma lista de produtos em várias páginas usando paginação.</li>
-<li>Adicione links de paginação à sua view.</li>
+<li>Divida uma lista de produtos em várias páginas usando paginação. ✔️</li>
+<li>Adicione links de paginação à sua view. ✔️</li>
 </ol>
 
 <h3>Envio de E-mails:</h3>
@@ -132,12 +133,15 @@ Este repositório contém exercícios e projetos básicos para aprender os funda
 Além dos exercícios, este repositório também inclui projetos simples que permitem aplicar os conceitos aprendidos de forma prática:
 
 1. **Blog Simples**
+
    - Criação de um blog básico com postagens e comentários.
 
 2. **API de Tarefas**
+
    - Criação de uma API RESTful para gerenciar tarefas.
 
 3. **Sistema de E-commerce**
+
    - Construção de um sistema de e-commerce com listagem de produtos.
 
 4. **Agenda de Contatos**
