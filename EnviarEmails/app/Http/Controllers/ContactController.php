@@ -15,9 +15,13 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
-        Mail::to(users: 'kauan.nutriport@gmail.com', name: 'Kauan')->send(new Contact(data: [
+        $sent = Mail::to(users: 'kauan.nutriport@gmail.com', name: 'Kauan')->send(new Contact(data: [
                 'fromName' => $request->input('name'),
+                'fromEmail' => $request->input('email'),
+                'message' => $request->input('message'),
             ]
         ));
+
+        dd("send", $sent);
     }
 }

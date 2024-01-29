@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use Faker\Provider\ar_EG\Address;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -16,7 +17,7 @@ class Contact extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(public readonly data)
+    public function __construct(public readonly array data)
     {
         
     }
@@ -27,7 +28,9 @@ class Contact extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Contact',
+            from:new Address($this->data['fromEmail'], $this->data['fromName']),
+            subject: $this->data['subject'],
+            replyTo: $this->data
         );
     }
 
@@ -37,7 +40,7 @@ class Contact extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            html: 'view.name',
         );
     }
 
