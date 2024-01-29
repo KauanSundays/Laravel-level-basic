@@ -13,8 +13,11 @@ class ContactController extends Controller
         return view('contact');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        Mail::to('kauan.nutriport@gmail.com', 'Kauan')->send(new Contact);
+        Mail::to(users: 'kauan.nutriport@gmail.com', name: 'Kauan')->send(new Contact(data: [
+                'fromName' => $request->input('name'),
+            ]
+        ));
     }
 }
